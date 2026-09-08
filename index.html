@@ -3,238 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Chasky - Tu Transporte Rural en Tiempo Real</title>
-    <!-- Fuentes de Google -->
+    <title>La Ruta - Transporte Inteligente en Congata</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --verde-claro: #a8e063;
-            --verde-oscuro: #134e13;
-            --negro: #1a1a1a;
-            --blanco: #ffffff;
-            --gris-claro: #f4f7f4;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        body {
-            background-color: var(--gris-claro);
-            color: var(--negro);
-            line-height: 1.6;
-        }
-
-        header {
-            background: linear-gradient(135deg, var(--verde-oscuro), #0a290a);
-            color: var(--blanco);
-            text-align: center;
-            padding: 3rem 1rem;
-            border-bottom: 6px solid var(--verde-claro);
-        }
-
-        header h1 {
-            font-size: 2.8rem;
-            font-weight: 800;
-            color: var(--verde-claro);
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-
-        header p {
-            font-size: 1.2rem;
-            margin-top: 0.5rem;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: auto;
-            padding: 2rem;
-        }
-
-        .card {
-            background: var(--blanco);
-            border-radius: 12px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            border-left: 6px solid var(--verde-oscuro);
-        }
-
-        h2 {
-            color: var(--verde-oscuro);
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .problem-grid, .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1rem;
-        }
-
-        .item-box {
-            background: var(--gris-claro);
-            padding: 1.5rem;
-            border-radius: 8px;
-            border: 1px solid #dcdcdc;
-            transition: transform 0.3s ease;
-        }
-
-        .item-box:hover {
-            transform: translateY(-5px);
-            border-color: var(--verde-claro);
-        }
-
-        /* Simulador interactivo de la app */
-        .simulator {
-            background: var(--negro);
-            color: var(--blanco);
-            border-radius: 20px;
-            padding: 2rem;
-            text-align: center;
-            max-width: 400px;
-            margin: 2rem auto;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-            border: 4px solid var(--verde-claro);
-        }
-
-        .phone-screen {
-            background: #222;
-            padding: 1.5rem;
-            border-radius: 15px;
-            margin-top: 1rem;
-            min-height: 150px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .btn-sim {
-            background: var(--verde-claro);
-            color: var(--negro);
-            border: none;
-            padding: 0.8rem 1.5rem;
-            font-size: 1rem;
-            font-weight: 600;
-            border-radius: 30px;
-            cursor: pointer;
-            margin-top: 1rem;
-            transition: background 0.3s;
-        }
-
-        .btn-sim:hover {
-            background: #91cd4f;
-        }
-
-        footer {
-            background: var(--negro);
-            color: var(--blanco);
-            text-align: center;
-            padding: 2rem;
-            margin-top: 3rem;
-            border-top: 4px solid var(--verde-claro);
-        }
-
-        .credits {
-            margin-top: 1rem;
-            font-size: 0.9rem;
-            color: #ccc;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>🚌 El Chasky</h1>
-        <p>Tu transporte rural y popular en tiempo real. ¡Viaja sin estrés ni demoras!</p>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>🚌 La Ruta</h1>
+            <p>Revolucionando el transporte en Congata. Viaja seguro, a tiempo y sin estrés.</p>
+            <a href="#simulador" class="btn-cta">Pruébala Ahora</a>
+        </div>
     </header>
 
     <div class="container">
-        <!-- 1. La Problemática -->
-        <section class="card">
-            <h2>📌 1. La Problemática (El Dolor Real)</h2>
-            <p>En nuestra zona rural, los vecinos, estudiantes y trabajadores sufren diariamente de incertidumbre y pérdida de tiempo:</p>
-            <div class="problem-grid">
-                <div class="item-box">
-                    <strong>⏳ Largas Esperas:</strong> Nadie sabe con exactitud a qué hora pasa el carro por el paradero.
+        <!-- Sección Visual de Impacto -->
+        <section class="banner-card">
+            <div class="banner-text">
+                <h2>📱 La solución que tu comunidad necesitaba</h2>
+                <p>Diseñada por estudiantes de la <strong>I.E. Alma Mater de Congata</strong> para acabar con las largas esperas en los paraderos[cite: 1].</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <h3>15 min</h3>
+                    <p>Ahorro promedio por viaje</p>
                 </div>
-                <div class="item-box">
-                    <strong>🏃‍♂️ Salidas Anticipadas:</strong> La gente sale con demasiada hora de anticipación por miedo a perder la movilidad.
-                </div>
-                <div class="item-box">
-                    <strong>❓ Desorientación:</strong> No se sabe si la unidad va de subida, de bajada o si ya pasó demorada.
+                <div class="stat-box">
+                    <h3>100%</h3>
+                    <p>En tiempo real</p>
                 </div>
             </div>
         </section>
 
-        <!-- 2. La Solución -->
+        <!-- 1. La Problemática -->
         <section class="card">
-            <h2>💡 2. La Solución: El Chasky</h2>
-            <p>Es un aplicativo móvil intuitivo hecho a la medida de nuestra comunidad para transformar la espera en una experiencia moderna:</p>
-            <div class="features-grid">
-                <div class="item-box">📍 Ubicación en tiempo real de las unidades.</div>
-                <div class="item-box">⏰ Hora exacta de salida desde el terminal.</div>
-                <div class="item-box">🗺️ Consulta de rutas completas y paraderos cercanos.</div>
-                <div class="item-box">⏱️ Cálculo automático del tiempo de espera.</div>
-            </div>
-
-            <!-- Simulador Interactivo (Script en acción) -->
-            <div class="simulator">
-                <h3>📱 Pruébalo en vivo</h3>
-                <div class="phone-screen" id="pantallaApp">
-                    <p>Haz clic para buscar tu movilidad</p>
+            <h2>📌 1. La Problemática (El Dolor Real)</h2>
+            <div class="grid-cards">
+                <div class="feature-item">
+                    <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=400&q=80" alt="Esperando combi">
+                    <h3>Incertidumbre en Paraderos</h3>
+                    <p>Nadie sabe con exactitud cuándo pasará el siguiente vehículo[cite: 1].</p>
                 </div>
-                <button class="btn-sim" onclick="consultarMovilidad()">Ver Combi más cercana</button>
+                <div class="feature-item">
+                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80" alt="Estar apurado">
+                    <h3>Salidas Anticipadas</h3>
+                    <p>La gente sale muy temprano de casa por miedo a perder la movilidad[cite: 1].</p>
+                </div>
+                <div class="feature-item">
+                    <img src="https://images.unsplash.com/photo-1494515843233-f71a1c4e5408?auto=format&fit=crop&w=400&q=80" alt="Tráfico">
+                    <h3>Desorientación de Ruta</h3>
+                    <p>Falta de información sobre si las unidades van de subida o de bajada[cite: 1].</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. La Solución y Simulador Interactivo -->
+        <section class="card" id="simulador">
+            <h2>💡 2. La Solución: Simulador en Vivo</h2>
+            <p>Interactúa con nuestra aplicación simulada para conocer el estado actual de las unidades en Congata.</p>
+            
+            <div class="simulator">
+                <h3>📲 Panel de Control - La Ruta</h3>
+                <div class="phone-screen" id="pantallaApp">
+                    <p>Selecciona una opción para rastrear tu unidad</p>
+                </div>
+                <div class="sim-buttons">
+                    <button class="btn-sim" onclick="consultarMovilidad('SUBIDA')">Ver Subida ⬆️</button>
+                    <button class="btn-sim" onclick="consultarMovilidad('BAJADA')">Ver Bajada ⬇️</button>
+                </div>
             </div>
         </section>
 
         <!-- 3. Propuesta de Valor -->
-        <section class="card" style="border-left-color: var(--verde-claro);">
+        <section class="card highlight-card">
             <h2>⭐ 3. Propuesta de Valor</h2>
-            <p style="font-size: 1.1rem; font-weight: 600; text-align: center; color: var(--verde-oscuro);">
-                "Ayudamos a los habitantes y familias a recuperar su tiempo y planificar sus viajes sin estrés, conectando el campo y la ciudad con una herramienta móvil confiable y nuestra."
+            <p class="quote">
+                "Ayudamos a los habitantes, estudiantes y familias de Congata a recuperar su tiempo y planificar sus viajes con total seguridad y confianza[cite: 1]."
             </p>
         </section>
     </div>
 
     <footer>
-        <p>&copy; 2026 El Chasky - Todos los derechos reservados</p>
-        <div class="credits">
-            <p><strong>Estudiantes:</strong> Alonso Melgarejo, Antoni Quispe, Belinda Chipana</p>
-            <p><strong>Docente:</strong> Ricardo | <strong>Grado:</strong> 4° "B" de Secundaria (Aula 403)</p>
-            <p>Colegio I.E. Alma Mater de Congata</p>
+        <div class="footer-content">
+            <p>&copy; 2026 La Ruta - Todos los derechos reservados</p>
+            <div class="credits">
+                <p><strong>Estudiantes creadores:</strong> Alonso Melgarejo, Antoni Quispe, Belinda Chipana[cite: 1]</p>
+                <p><strong>Docente a cargo:</strong> Ricardo | <strong>Grado:</strong> 4° "B" de Secundaria (Aula 403)[cite: 1]</p>
+                <p>Colegio I.E. Alma Mater de Congata[cite: 1]</p>
+            </div>
         </div>
     </footer>
 
-    <!-- Script Interactivo -->
-    <script>
-        function consultarMovilidad() {
-            const pantalla = document.getElementById('pantallaApp');
-            pantalla.innerHTML = "<p>Buscando unidades cercanas...</p>";
-            
-            setTimeout(() => {
-                const minutos = Math.floor(Math.random() * 8) + 2; // Número aleatorio entre 2 y 10 minutos
-                const sentido = Math.random() > 0.5 ? "SUBIDA" : "BAJADA";
-                pantalla.innerHTML = `
-                    <p style="color: var(--verde-claro); font-weight: bold; font-size: 1.1rem;">¡Combi Detectada!</p>
-                    <p>Sentido: <strong>${sentido}</strong></p>
-                    <p>Llega a tu paradero en: <strong>${minutos} minutos</strong></p>
-                `;
-            }, 1000);
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
